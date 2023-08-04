@@ -9,7 +9,8 @@ const port = process.env.PORT;
 // CORS
 app.use(cors());
 
-// Middleware para el directorio público
+// Middleware para el directorio público, puedes tener un archivo html en tu carpeta public, al poner solo: http://localhost:8080, te mostrará ese archivo
+app.use(express.static('public'))
 
 // Otro middleware: lectura y parseo del body
 app.use(express.json());
